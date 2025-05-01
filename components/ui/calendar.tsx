@@ -12,6 +12,7 @@ export type CalendarProps = {
   defaultMonth?: Date
   onSelect?: (date: Date | undefined) => void
   disabled?: boolean
+  initialFocus?: boolean
   [key: string]: any
 }
 
@@ -20,7 +21,37 @@ function Calendar({
   selected,
   onSelect,
   disabled,
-  ...props
+  initialFocus,
+  defaultMonth,
+  mode,
+  fromDate,
+  toDate,
+  fromYear,
+  toYear,
+  fromMonth,
+  toMonth,
+  captionLayout,
+  numberOfMonths,
+  pagedNavigation,
+  showWeekNumber,
+  weekStartsOn,
+  locale,
+  modifiersClassNames,
+  modifiersStyles,
+  modifiers,
+  onDayClick,
+  onDayFocus,
+  onDayBlur,
+  onDayMouseEnter,
+  onDayMouseLeave,
+  onDayKeyDown,
+  onDayKeyUp,
+  onDayKeyPress,
+  onDayPointerEnter,
+  onDayPointerLeave,
+  onNextClick,
+  onPrevClick,
+  ...inputProps
 }: CalendarProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value && onSelect) {
@@ -51,7 +82,7 @@ function Calendar({
         value={formatDate(selected)}
         onChange={handleChange}
         disabled={disabled}
-        {...props}
+        {...inputProps}
       />
     </div>
   )

@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 const ToastProvider = ToastPrimitives.Provider
 
 const ToastViewport = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Viewport>,
+  HTMLOListElement,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Viewport
@@ -41,7 +41,7 @@ const toastVariants = cva(
 )
 
 const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitives.Root>,
+  HTMLLIElement,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
 >(({ className, variant, ...props }, ref) => {
