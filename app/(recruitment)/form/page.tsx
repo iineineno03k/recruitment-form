@@ -1,4 +1,5 @@
 import { RecruitmentForm } from "@/components/features/recruitment"
+import { PageContainer } from "@/components/layouts"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,13 +9,10 @@ export const metadata: Metadata = {
 
 export default function RecruitmentFormPage() {
   return (
-    <main className="min-h-screen bg-[#F8F9FA] dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-          採用管理システム - 応募者情報登録
-        </h1>
-        <RecruitmentForm />
-      </div>
-    </main>
+    <PageContainer
+      title="採用管理システム - 応募者情報登録"
+    >
+      <RecruitmentForm />
+    </PageContainer>
   )
 } 

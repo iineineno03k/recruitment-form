@@ -1,0 +1,5 @@
+export { BasicInfoStep } from "./basic-info"
+export { SkillsStep } from "./skills"
+export { PreferencesStep } from "./preferences"
+export { DocumentsStep } from "./documents"
+export { ConfirmationStep } from "./confirmation" 

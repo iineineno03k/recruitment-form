@@ -8,16 +8,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Loader2 } from "lucide-react"
-import { BasicInfoStep } from "@/components/form-steps/basic-info-step"
-import { SkillsStep } from "@/components/form-steps/skills-step"
-import { PreferencesStep } from "@/components/form-steps/preferences-step"
-import { DocumentsStep } from "@/components/form-steps/documents-step"
-import { ConfirmationStep } from "@/components/form-steps/confirmation-step"
 import { formSchema } from "@/lib/form-schema"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { FORM_STEPS } from "./constants"
 import { FormData } from "@/lib/types/form.types"
 import { saveRecruitmentData } from "@/lib/services/recruitment"
+import {
+  BasicInfoStep,
+  SkillsStep,
+  PreferencesStep,
+  DocumentsStep,
+  ConfirmationStep
+} from "./steps"
 
 export function RecruitmentForm() {
   const [currentStep, setCurrentStep] = useState(0)
