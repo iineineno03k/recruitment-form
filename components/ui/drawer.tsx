@@ -32,7 +32,7 @@ const DrawerPortal = DialogPortal
 const DrawerOverlay = DialogOverlay
 
 const DrawerContent = React.forwardRef<
-  React.ElementRef<typeof DialogContent>,
+  HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof DialogContent>
 >(({ className, children, ...props }, ref) => (
   <DialogPortal>
@@ -75,7 +75,7 @@ const DrawerFooter = ({
 DrawerFooter.displayName = "DrawerFooter"
 
 const DrawerTitle = React.forwardRef<
-  React.ElementRef<typeof DialogTitle>,
+  HTMLHeadingElement,
   React.ComponentPropsWithoutRef<typeof DialogTitle>
 >(({ className, ...props }, ref) => (
   <DialogTitle
@@ -90,7 +90,7 @@ const DrawerTitle = React.forwardRef<
 DrawerTitle.displayName = "DrawerTitle"
 
 const DrawerDescription = React.forwardRef<
-  React.ElementRef<typeof DialogDescription>,
+  HTMLParagraphElement,
   React.ComponentPropsWithoutRef<typeof DialogDescription>
 >(({ className, ...props }, ref) => (
   <DialogDescription
